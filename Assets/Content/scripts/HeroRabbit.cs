@@ -6,22 +6,35 @@ public class HeroRabbit : MonoBehaviour {
 
     Rigidbody2D myBody = null;
     public float speed = 1;
-
+    Vector3 startPosition;//= new Vector3(0, 0);
     bool JumpActive = false;
     float JumpTime = 0f;
+    Animator animator;
 
     public float MaxJumpTime = 2f;
     public float JumpSpeed = 2f;
+    bool isBig = false;
 
     // Use this for initialization
     void Start () {
         myBody = GetComponent<Rigidbody2D>();
-        LevelController.current.setStartPosition(transform.position);
+        animator = GetComponent<Animator>();
+        setStartPosition(myBody.transform.position);
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+
+        if (animator.GetBool("isDie"))
+        {
+            //якщо анімація ще не змінилась або якщо анімація смерті завершила свою роботу
+            if (!animator.GetCurrentAnimatorStateInfo(0).IsName("rabbit_die_animation") || animator.GetCurrentAnimatorStateInfo(0).length > animator.GetCurrentAnimatorStateInfo(0).normalizedTime) return;
+            animator.SetBool("isDie", false);
+            LevelController.current.onRabitDeath(this);
+            return;
+        }
+
         //[-1, 1]
         float value = Input.GetAxis("Horizontal");
         if (Mathf.Abs(value) > 0)
@@ -67,7 +80,7 @@ public class HeroRabbit : MonoBehaviour {
         }
 
 
-        Animator animator = GetComponent<Animator>();
+        
         if (Mathf.Abs(value) > 0)
         {
             animator.SetBool("isRun", true);
@@ -98,5 +111,32 @@ public class HeroRabbit : MonoBehaviour {
         RaycastHit2D hit = Physics2D.Linecast(from, to, layer_id);
         if (hit) return true;
         return false;
+    }
+
+    public void onRabbitDeath()
+    {
+        if (isBig)
+        {
+            isBig = false;
+            Vector3 currSize = this.transform.localScale;
+            this.transform.localScale = new Vector3(currSize.x / 1.5f, currSize.y / 1.5f, 0);
+        }
+        myBody.MoveRotation(0);
+        myBody.angularVelocity = 0;
+        this.transform.position = this.startPosition;
+    }
+
+    public void setStartPosition(Vector3 position)
+    {
+        this.startPosition = position;
+    }
+
+    public void setBig(bool flag)
+    {
+        isBig = flag;
+    }
+    public bool isBigg()
+    {
+        return isBig;
     }
 }
