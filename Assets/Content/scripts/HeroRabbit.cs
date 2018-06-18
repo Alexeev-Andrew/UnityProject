@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class HeroRabbit : MonoBehaviour {
 
+    public static HeroRabbit lastRabit = null;
+
     Rigidbody2D myBody = null;
     public float speed = 1;
     Vector3 startPosition;//= new Vector3(0, 0);
@@ -14,6 +16,12 @@ public class HeroRabbit : MonoBehaviour {
     public float MaxJumpTime = 2f;
     public float JumpSpeed = 2f;
     bool isBig = false;
+
+
+    void Awake()
+    {
+        lastRabit = this;
+    }
 
     // Use this for initialization
     void Start () {

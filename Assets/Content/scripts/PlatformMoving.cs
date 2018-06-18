@@ -67,7 +67,7 @@ public class PlatformMoving : MonoBehaviour {
     {
         pos.z = 0;
         target.z = 0;
-        return Vector3.Distance(pos, target) < 0.02f;
+        return Vector3.Distance(pos, target) < 0.1f;
     }
 
 }

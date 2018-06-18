@@ -7,7 +7,10 @@ public class Collectable : MonoBehaviour {
     protected virtual void OnRabitHit(HeroRabbit rabit)
     {
     }
-    void OnTriggerEnter2D(Collider2D collider)
+
+
+
+void OnTriggerEnter2D(Collider2D collider)
     {
         {
             HeroRabbit rabit = collider.GetComponent<HeroRabbit>();
