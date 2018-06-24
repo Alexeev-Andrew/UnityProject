@@ -6,14 +6,15 @@ using UnityEngine;
 public class LevelController : MonoBehaviour
 {
     public static LevelController current;
-
+   
     int gold;
 
     void Awake()
     {
         current = this;
         Debug.Log("start");
-        gold = 0;
+
+        gold = PlayerPrefs.GetInt("coins", 0);
     }
 
     public void onRabitDeath(HeroRabbit rabbit)
@@ -34,5 +35,11 @@ public class LevelController : MonoBehaviour
         Debug.Log(gold);
         return gold;
     }
+
+    public void saveCoins()
+	{
+		PlayerPrefs.SetInt("coins", gold);
+		PlayerPrefs.Save();
+	}
 
 }
