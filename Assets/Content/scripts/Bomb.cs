@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class Bomb : Collectable {
 
+    public AudioClip audio;
+
     protected override void OnRabitHit(HeroRabbit rabit)
     {
+        AudioSource.PlayClipAtPoint(audio, transform.position);
         if (rabit.isBigg())
         {
             rabit.setBig(false);

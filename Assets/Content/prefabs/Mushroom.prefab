@@ -78,6 +78,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25a1ca4ddb3374c48b795d5e788b6dc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audio: {fileID: 8300000, guid: 7e71b9428c0c54a65ad2831f0a140120, type: 3}
 --- !u!212 &212894751116825820
 SpriteRenderer:
   m_ObjectHideFlags: 1

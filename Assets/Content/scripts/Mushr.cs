@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class Mushr : Collectable {
 
+    public AudioClip audio;
+
     protected override void OnRabitHit(HeroRabbit rabit)
     {
+        AudioSource.PlayClipAtPoint(audio, transform.position);
         ObjectsInLevel.current.addMushr(1);
         if (!rabit.isBigg())
         {
