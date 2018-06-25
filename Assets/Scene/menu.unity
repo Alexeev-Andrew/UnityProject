@@ -315,6 +315,17 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 79489f798a0ea2c4d809714a431c2d38, type: 2}
   m_IsPrefabParent: 0
+--- !u!224 &347721768 stripped
+RectTransform:
+  m_PrefabParentObject: {fileID: 224121450326014580, guid: a9bbedd17cbd10d4284ee7dc25b709d8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1769662981}
+--- !u!114 &347721769 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114511684927596934, guid: a9bbedd17cbd10d4284ee7dc25b709d8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1769662981}
+  m_Script: {fileID: 11500000, guid: a5d8a2d5dec9e1d46909c18ed9f1536c, type: 3}
 --- !u!1001 &576463574
 Prefab:
   m_ObjectHideFlags: 0
@@ -450,8 +461,9 @@ RectTransform:
   - {fileID: 1688397931}
   - {fileID: 1874837139}
   - {fileID: 1332765887}
+  - {fileID: 347721768}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -541,7 +553,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4366045219266802, guid: 2cd78d2475ad6344bb21d1fc72cf65bd, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1498445760491346, guid: 2cd78d2475ad6344bb21d1fc72cf65bd, type: 2}
       propertyPath: m_Name
@@ -1369,6 +1381,110 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1701704560}
+--- !u!1001 &1769662981
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 583295323}
+    m_Modifications:
+    - target: {fileID: 224121450326014580, guid: a9bbedd17cbd10d4284ee7dc25b709d8,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224121450326014580, guid: a9bbedd17cbd10d4284ee7dc25b709d8,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224121450326014580, guid: a9bbedd17cbd10d4284ee7dc25b709d8,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224121450326014580, guid: a9bbedd17cbd10d4284ee7dc25b709d8,
+        type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224121450326014580, guid: a9bbedd17cbd10d4284ee7dc25b709d8,
+        type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224121450326014580, guid: a9bbedd17cbd10d4284ee7dc25b709d8,
+        type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224121450326014580, guid: a9bbedd17cbd10d4284ee7dc25b709d8,
+        type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224121450326014580, guid: a9bbedd17cbd10d4284ee7dc25b709d8,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 224121450326014580, guid: a9bbedd17cbd10d4284ee7dc25b709d8,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224121450326014580, guid: a9bbedd17cbd10d4284ee7dc25b709d8,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224121450326014580, guid: a9bbedd17cbd10d4284ee7dc25b709d8,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224121450326014580, guid: a9bbedd17cbd10d4284ee7dc25b709d8,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224121450326014580, guid: a9bbedd17cbd10d4284ee7dc25b709d8,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224121450326014580, guid: a9bbedd17cbd10d4284ee7dc25b709d8,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224121450326014580, guid: a9bbedd17cbd10d4284ee7dc25b709d8,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224121450326014580, guid: a9bbedd17cbd10d4284ee7dc25b709d8,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224121450326014580, guid: a9bbedd17cbd10d4284ee7dc25b709d8,
+        type: 2}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224121450326014580, guid: a9bbedd17cbd10d4284ee7dc25b709d8,
+        type: 2}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1584551825252362, guid: a9bbedd17cbd10d4284ee7dc25b709d8, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: a9bbedd17cbd10d4284ee7dc25b709d8, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1874837138
 GameObject:
   m_ObjectHideFlags: 0
@@ -1458,7 +1574,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1874837142}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 347721769}
+        m_MethodName: settings
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1874837142

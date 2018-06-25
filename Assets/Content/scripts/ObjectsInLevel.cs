@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ObjectsInLevel : MonoBehaviour {
 
@@ -19,6 +20,8 @@ public class ObjectsInLevel : MonoBehaviour {
 
     [SerializeField]
     private GameObject losePanel;
+    [SerializeField]
+    private Image[] cr;
 
     void Awake()
     {
@@ -50,6 +53,10 @@ public class ObjectsInLevel : MonoBehaviour {
         changeLevelStatistic.current.addCrystal(s, crystals);
         if (crystals == 3) Stats.hasCrystals = true;
     }
+    public int getCrystals()
+    {
+        return crystals;
+    }
     public void addMushr(int n)
     {
         mushr += n;
@@ -67,11 +74,17 @@ public class ObjectsInLevel : MonoBehaviour {
         if (lives > 0)
             changeLevelStatistic.current.setLifes(lives);
         else
-            //SceneManager.LoadScene("chooseLevelScene");
+        {  //SceneManager.LoadScene("chooseLevelScene");
             losePanel.SetActive(true);
-
+            Image[] im = changeLevelStatistic.current.getCrystals();
+            for (int i = 0; i < 3; i++)
+            {
+                cr[i].GetComponent<Image>().sprite = im[i].GetComponent<Image>().sprite;
+            }
+        }
     }
-    
+
+
     private void OnDestroy()
     {
         Debug.Log("onDestroy");

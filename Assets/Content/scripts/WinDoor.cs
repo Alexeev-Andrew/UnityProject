@@ -2,11 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class WinDoor : MonoBehaviour {
 
     [SerializeField]
     private GameObject winPanel;
+
+    [SerializeField]
+    private Image[] crystals;
+
+    [SerializeField]
+    private Text fruits;
+
+    [SerializeField]
+    private Text coins;
 
     void startWaiting()
     {
@@ -18,6 +28,13 @@ public class WinDoor : MonoBehaviour {
     {
         yield return new WaitForSeconds(0.5f);
         winPanel.SetActive(true);
+        Image[] im = changeLevelStatistic.current.getCrystals();
+        for(int i = 0; i < 3; i++)
+        {
+            crystals[i].GetComponent<Image>().sprite = im[i].GetComponent<Image>().sprite;
+        }
+        coins.text = changeLevelStatistic.current.getCoinsText().text;
+        fruits.text = changeLevelStatistic.current.getFruitsText().text;
     }
 
     void disableRabbit(HeroRabbit rabit)

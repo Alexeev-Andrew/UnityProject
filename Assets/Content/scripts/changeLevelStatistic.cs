@@ -43,4 +43,18 @@ public class changeLevelStatistic : MonoBehaviour {
     {
         crystals[--position].GetComponent<Image>().sprite = sprite;
     }
+
+    public Image[] getCrystals()
+    {
+        return crystals;
+    }
+
+    public Text getCoinsText()
+    {
+        return coinsLabel;
+    }
+    public Text getFruitsText()
+    {
+        return fruitLabel;
+    }
 }

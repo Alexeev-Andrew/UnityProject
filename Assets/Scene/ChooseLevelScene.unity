@@ -1022,6 +1022,7 @@ GameObject:
   - component: {fileID: 1234882894}
   - component: {fileID: 1234882896}
   - component: {fileID: 1234882895}
+  - component: {fileID: 1234882897}
   m_Layer: 5
   m_Name: moneyIm
   m_TagString: Untagged
@@ -1081,6 +1082,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1234882893}
+--- !u!114 &1234882897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1234882893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 297f855d8728b9846b53af35002c08b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinsLabel: {fileID: 1139951559}
 --- !u!1 &1328724227
 GameObject:
   m_ObjectHideFlags: 0
@@ -1111,12 +1124,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 2
-  crystals: {fileID: 0}
-  fruits: {fileID: 0}
-  isBlock: {fileID: 0}
-  crystal: {fileID: 0}
-  fruit: {fileID: 0}
-  locked: {fileID: 0}
+  crystals: {fileID: 1109357579}
+  fruits: {fileID: 2144197866}
+  isBlock: {fileID: 190552629}
+  crystal: {fileID: 21300000, guid: 3cb1b99d25dc94b7a9197f9696940e7d, type: 3}
+  fruit: {fileID: 21300000, guid: 397e43185a08b4129b4bc15135201dc0, type: 3}
+  locked: {fileID: 21300000, guid: a4d98cc9b334e40dbb50c46cb7cdcf69, type: 3}
 --- !u!61 &1328724229
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1546,9 +1559,26 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114223940693066892, guid: 9c21bb19dce93004288e61060b8407f6, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 9c21bb19dce93004288e61060b8407f6, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &2005698149 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1761252856447384, guid: 9c21bb19dce93004288e61060b8407f6,
+    type: 2}
+  m_PrefabInternal: {fileID: 2005698148}
+--- !u!114 &2005698150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2005698149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4ddc7be107b245438e09f04e07a3468, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2029539616
 GameObject:
   m_ObjectHideFlags: 0
